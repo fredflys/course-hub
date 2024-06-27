@@ -1,0 +1,25 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UserType {
+  id: String!
+  name: String!
+  desc: String!
+}
+
+type Query {
+  """find user by id"""
+  find(id: String!): UserType!
+}
+
+type Mutation {
+  """create user"""
+  create(params: UserInput!): Boolean!
+}
+
+input UserInput {
+  name: String!
+  desc: String!
+  avatar: String!
+}

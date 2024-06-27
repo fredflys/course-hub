@@ -25,7 +25,7 @@ import { UserResolver } from './modules/user/user.resolver';
     }),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      autoSchemaFile: true,
+      autoSchemaFile: './src/schema.gql',
     }),
     UserModule,
   ],
