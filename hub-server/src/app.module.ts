@@ -6,6 +6,7 @@ import { UserModule } from './modules/user/user.module';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { UserResolver } from './modules/user/user.resolver';
+import { S3Module } from './modules/s3/s3.module';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { UserResolver } from './modules/user/user.resolver';
       autoSchemaFile: './src/schema.gql',
     }),
     UserModule,
+    S3Module,
   ],
   controllers: [AppController],
   providers: [AppService, UserResolver],

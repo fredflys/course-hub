@@ -11,6 +11,9 @@ type UserType {
 type Query {
   """find user by id"""
   find(id: String!): UserType!
+
+  """"""
+  getUploadUrl: String!
 }
 
 type Mutation {
