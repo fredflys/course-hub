@@ -1,6 +1,7 @@
 import "./App.css";
 import { useQuery } from "@apollo/client";
 import userFind from "./graphql/userQuery";
+import { Button, Form, Input } from "antd-mobile";
 
 function App() {
   const { loading, data } = useQuery(userFind, {
@@ -11,6 +12,22 @@ function App() {
     <>
       <p>data: {JSON.stringify(data)}</p>
       <p>loading: {loading}</p>
+      <Form
+        layout="horizontal"
+        onFinish={() => {}}
+        footer={
+          <Button block type="submit" color="primary" size="large">
+            Submit
+          </Button>
+        }
+      >
+        <Form.Item name="name" label="name">
+          <Input></Input>
+        </Form.Item>
+        <Form.Item name="desc" label="description">
+          <Input></Input>
+        </Form.Item>
+      </Form>
     </>
   );
 }
