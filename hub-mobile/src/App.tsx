@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.module.less";
 import { useQuery } from "@apollo/client";
 import userFind from "./graphql/userQuery";
 import { Button, Form, Input } from "antd-mobile";
@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <p>data: {JSON.stringify(data)}</p>
-      <p>loading: {loading}</p>
+      <p className={styles.container}>loading: {loading}</p>
       <Form
         layout="horizontal"
         onFinish={() => {}}
